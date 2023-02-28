@@ -1,0 +1,77 @@
+.modal {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  background-color: #f5d125;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  &:before {
+    content: '';
+    width: 150px;
+    height: 150px;
+    background-color: #0ff;
+    border-radius: 50%;
+    position: absolute;
+    top: -34px;
+    left: -27px;
+  }
+}
+.backdrop {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  background-color: #3c3c3c85;
+  transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  backdrop-filter: blur(7px);
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.pokemon_card_background_title {
+  text-transform: uppercase;
+  color: #0000000a;
+  font-size: 15rem;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.pokemon_card_title {
+  font-size: 60px;
+  text-transform: capitalize;
+  color: deepskyblue;
+}
+
+.details-wrap {
+  display: flex;
+}
+
+.modal-close {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
